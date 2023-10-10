@@ -1,7 +1,7 @@
 
 package com.kingmang.LZREngine.GameObject;
 
-import com.kingmang.LZREngine.Cheker.Checker;
+import com.kingmang.LZREngine.Cheker.check;
 import com.kingmang.LZREngine.Geometry.IsotheticBoundingBox2D;
 import com.kingmang.LZREngine.Geometry.Polygon2D;
 import com.kingmang.LZREngine.Geometry.Vector2f;
@@ -84,7 +84,7 @@ public abstract class GameObject {
         Vector2f[] vertices = myPolygon.toGlobalArray();
         boolean vertexOutside = false;
         for(int i=0; i<vertices.length && !vertexOutside; i++){
-            vertexOutside = !Checker.pointInPolygon(polygon, vertices[i]);
+            vertexOutside = !check.pointInPolygon(polygon, vertices[i]);
         }
         return (!vertexOutside);
     }
@@ -95,12 +95,12 @@ public abstract class GameObject {
         Vector2f[] vertices = nextPolygon.toGlobalArray();
         boolean collisionFound = false;
         for(int i=0; i<vertices.length && !collisionFound; i++){
-            collisionFound = Checker.pointInPolygon(other.getPolygon(), vertices[i]);
+            collisionFound = check.pointInPolygon(other.getPolygon(), vertices[i]);
         }
         if(collisionFound) return true;
         vertices = other.getPolygon().toGlobalArray();
         for(int i=0; i<vertices.length && !collisionFound; i++){
-            collisionFound = Checker.pointInPolygon(this.getPolygon(), vertices[i]);
+            collisionFound = check.pointInPolygon(this.getPolygon(), vertices[i]);
         }
         return collisionFound;
     }

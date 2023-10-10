@@ -4,7 +4,7 @@ import com.kingmang.LZREngine.Geometry.LineSegment2f;
 import com.kingmang.LZREngine.Geometry.Polygon2D;
 import com.kingmang.LZREngine.Geometry.Vector2f;
 
-public class Checker {
+public class check {
 
     public static boolean pointInPolygon(Polygon2D polygon, Vector2f point){
         Vector2f[] vertices = polygon.toGlobalArray();
