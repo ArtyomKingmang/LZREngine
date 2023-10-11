@@ -1,6 +1,7 @@
-package com.kingmang.LZREngine.Entity;
+package com.kingmang.LZREngine.Enity;
 
-import com.kingmang.LZREngine.Engine.SceneException;
+import com.kingmang.LZREngine.Exeptions.EntityException;
+import com.kingmang.LZREngine.Exeptions.SceneException;
 import com.kingmang.LZREngine.Engine.State;
 
 import java.awt.Graphics2D;
@@ -92,13 +93,14 @@ public abstract class StateEntityScene extends EntityScene {
 
     @Override
     public void render(Graphics2D g){
+       //First render this scenes entities
        super.render(g);
+       //Now render current state
        if(getCurrentState() != null) getCurrentState().render(g);
     }
     @Override
     public void update(float updatesPerSecond) throws SceneException{
         synchronized(this){
-
            sceneUpdate(input, updatesPerSecond);
 
            for(Entity entity :entities.getForUpdate()){

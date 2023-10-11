@@ -1,7 +1,12 @@
-
-package com.kingmang.LZREngine.Image;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.kingmang.LZREngine.Images;
 
 import com.kingmang.LZREngine.Engine.Renderer;
+import com.kingmang.LZREngine.Exeptions.ImageException;
+
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
@@ -16,6 +21,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
 
+/**
+ *
+ * @author Max
+ */
 public class ImageLoader {
 
     private static ImageLoader instance;
@@ -38,8 +47,16 @@ public class ImageLoader {
     }
 
 
-    public void load(String imageListLocation) throws ImageException{
+    public void load(String imageListLocation) throws ImageException {
+        /*
+        //Image types can be static, sequenced by name[number].ext (i.e player01.gif)
+        //Grouped within a sprite sheet or grouped by different named images
 
+        //[stc;ball;jpg]
+        //[num;ball;jpg;9]  i.e. ball01.jpg
+        //[spr;ball;jpg;9]  9 images in the sprite sheet
+        //[grp;ball;ball.jpg;ballLeft.jpg;ballRight.jpg]
+         */
         if(imageListLocation.lastIndexOf('/')>0){
             imageResourceFolder = imageListLocation.substring(0, imageListLocation.lastIndexOf('/'))+"/";
         }else{

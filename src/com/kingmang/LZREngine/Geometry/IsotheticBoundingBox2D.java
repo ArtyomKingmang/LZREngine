@@ -1,4 +1,3 @@
-
 package com.kingmang.LZREngine.Geometry;
 
 public class IsotheticBoundingBox2D {

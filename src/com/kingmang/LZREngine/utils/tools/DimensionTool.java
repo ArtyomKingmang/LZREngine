@@ -1,4 +1,3 @@
-
 package com.kingmang.LZREngine.utils.tools;
 
 import java.awt.Dimension;
@@ -37,7 +36,6 @@ public class DimensionTool {
 
     public static float cmToPt(float cm){
         float inches = inchInCm*cm;
-//        System.out.println("INCHES "+inches);
         return inches*ptInInch;
     }
 

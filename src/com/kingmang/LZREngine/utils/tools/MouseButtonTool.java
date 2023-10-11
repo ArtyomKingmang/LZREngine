@@ -1,4 +1,3 @@
-
 package com.kingmang.LZREngine.utils.tools;
 
 import java.awt.MouseInfo;

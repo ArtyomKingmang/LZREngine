@@ -1,10 +1,10 @@
-
-package com.kingmang.LZREngine.Image;
-
+package com.kingmang.LZREngine.Exeptions;
 
 public class ImageException extends Exception {
 
-    public ImageException() {}
+
+    public ImageException() {
+    }
 
 
     public ImageException(String msg) {

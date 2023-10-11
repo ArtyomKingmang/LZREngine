@@ -1,4 +1,3 @@
-
 package com.kingmang.LZREngine.Geometry;
 
 public class LineSegment2f {
@@ -50,15 +49,12 @@ public class LineSegment2f {
                 ((x1 - x2)*(y3-y4) - (y1-y2)*(x3-x4));
         Vector2f intersect = new Vector2f(x, y);
         if(distanceFromPoint(intersect)<=0.00001){
-            //close enough
             return intersect;
         }
         return null;
     }
     public float distanceFromPoint(Vector2f point){
-        //Get projection of point onto line
-        //(tangent of line that collides with point)
-        //http://paulbourke.net/geometry/pointline/
+
         float x1 = start.x;
         float y1 = start.y;
         float x2 = end.x;
@@ -66,8 +62,8 @@ public class LineSegment2f {
         float x3 = point.x;
         float y3 = point.y;
         float u = ((x3-x1)*(x2-x1) + (y3-y1)*(y2-y1))/lengthSq();
-        if (u < 0.0) return point.distance(start);       // Beyond the start  of the segment
-        else if (u > 1.0) return point.distance(end);  // Beyond the end of the segment
+        if (u < 0.0) return point.distance(start);
+        else if (u > 1.0) return point.distance(end);
         Vector2f projection =  new Vector2f(
                 x1 + u*(x2-x1),
                 y1 + u*(y2-y1));

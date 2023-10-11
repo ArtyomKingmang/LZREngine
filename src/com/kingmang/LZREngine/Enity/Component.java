@@ -1,6 +1,7 @@
-package com.kingmang.LZREngine.Entity;
+package com.kingmang.LZREngine.Enity;
 
 import com.kingmang.LZREngine.Engine.RenderComponent;
+import com.kingmang.LZREngine.Exeptions.EntityException;
 
 public abstract class Component {
     private String id;

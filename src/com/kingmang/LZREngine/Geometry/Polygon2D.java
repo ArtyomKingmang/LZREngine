@@ -1,4 +1,3 @@
-
 package com.kingmang.LZREngine.Geometry;
 
 import java.awt.geom.GeneralPath;

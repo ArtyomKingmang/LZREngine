@@ -1,4 +1,3 @@
-
 package com.kingmang.LZREngine.Geometry;
 
 public class Vector2f implements Cloneable{

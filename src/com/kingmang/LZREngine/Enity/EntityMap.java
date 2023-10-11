@@ -1,5 +1,6 @@
+package com.kingmang.LZREngine.Enity;
 
-package com.kingmang.LZREngine.Entity;
+import com.kingmang.LZREngine.Exeptions.EntityException;
 
 import java.util.ArrayList;
 import java.util.Collections;

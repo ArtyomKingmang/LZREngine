@@ -18,5 +18,8 @@ public class TestObject extends GameObject {
         this.addVertex(-50, 50);
         this.addVertex(0, 0);
 
+
+
+
     }
 }

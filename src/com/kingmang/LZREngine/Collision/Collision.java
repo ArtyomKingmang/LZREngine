@@ -1,10 +1,10 @@
-package com.kingmang.LZREngine.Cheker;
+package com.kingmang.LZREngine.Collision;
 
 import com.kingmang.LZREngine.Geometry.LineSegment2f;
 import com.kingmang.LZREngine.Geometry.Polygon2D;
 import com.kingmang.LZREngine.Geometry.Vector2f;
 
-public class check {
+public class Collision {
 
     public static boolean pointInPolygon(Polygon2D polygon, Vector2f point){
         Vector2f[] vertices = polygon.toGlobalArray();

@@ -1,5 +1,4 @@
-
-package com.kingmang.LZREngine.Entity;
+package com.kingmang.LZREngine.Enity;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;

@@ -118,7 +118,6 @@ public class Rectangle2f implements Cloneable{
                     selfpoint = other.vertices[V_TOPLEFT];
                     break;
                 default:
-                    //E_BOTTOMLEFT_TOPLEFT:
                     selfpoint = other.vertices[V_BOTTOMRIGHT];
             }
             edgeintersectionfound = false;

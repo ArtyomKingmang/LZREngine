@@ -1,8 +1,6 @@
-
 package com.kingmang.LZREngine.utils.tools;
 
 import java.util.Random;
-
 
 public class RandTool {
     public final static Random random = new Random();

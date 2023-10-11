@@ -1,6 +1,7 @@
-package com.kingmang.LZREngine.Entity;
+package com.kingmang.LZREngine.Enity;
 
-import com.kingmang.LZREngine.Engine.SceneException;
+import com.kingmang.LZREngine.Exeptions.EntityException;
+import com.kingmang.LZREngine.Exeptions.SceneException;
 import com.kingmang.LZREngine.Scene.Scene;
 
 import java.awt.Graphics2D;

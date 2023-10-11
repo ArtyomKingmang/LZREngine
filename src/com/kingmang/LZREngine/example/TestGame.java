@@ -1,9 +1,8 @@
-
 package com.kingmang.LZREngine.example;
 
 import com.kingmang.LZREngine.Engine.Engine;
 import com.kingmang.LZREngine.Game.Game;
-import com.kingmang.LZREngine.Engine.SceneException;
+import com.kingmang.LZREngine.Exeptions.SceneException;
 
 
 public class TestGame extends Game {

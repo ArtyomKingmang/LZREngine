@@ -1,7 +1,6 @@
-
 package com.kingmang.LZREngine.GameObject;
 
-import com.kingmang.LZREngine.Cheker.check;
+import com.kingmang.LZREngine.Collision.Collision;
 import com.kingmang.LZREngine.Geometry.IsotheticBoundingBox2D;
 import com.kingmang.LZREngine.Geometry.Polygon2D;
 import com.kingmang.LZREngine.Geometry.Vector2f;
@@ -84,23 +83,22 @@ public abstract class GameObject {
         Vector2f[] vertices = myPolygon.toGlobalArray();
         boolean vertexOutside = false;
         for(int i=0; i<vertices.length && !vertexOutside; i++){
-            vertexOutside = !check.pointInPolygon(polygon, vertices[i]);
+            vertexOutside = !Collision.pointInPolygon(polygon, vertices[i]);
         }
         return (!vertexOutside);
     }
     public boolean collidesWith(Vector2f myNextLocation, GameObject other){
         Polygon2D nextPolygon = this.polygon.getPolygonFrom(myNextLocation);
-        //check rectangles first to save time
         if(!nextPolygon.getIsotheticBoundingBox().collidesIncl(other.getBoundingBox())) return false;
         Vector2f[] vertices = nextPolygon.toGlobalArray();
         boolean collisionFound = false;
         for(int i=0; i<vertices.length && !collisionFound; i++){
-            collisionFound = check.pointInPolygon(other.getPolygon(), vertices[i]);
+            collisionFound = Collision.pointInPolygon(other.getPolygon(), vertices[i]);
         }
         if(collisionFound) return true;
         vertices = other.getPolygon().toGlobalArray();
         for(int i=0; i<vertices.length && !collisionFound; i++){
-            collisionFound = check.pointInPolygon(this.getPolygon(), vertices[i]);
+            collisionFound = Collision.pointInPolygon(this.getPolygon(), vertices[i]);
         }
         return collisionFound;
     }

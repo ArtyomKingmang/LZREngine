@@ -1,10 +1,11 @@
 package com.kingmang.LZREngine.example;
 
 import com.kingmang.LZREngine.Scene.Scene;
-import com.kingmang.LZREngine.Engine.SceneException;
+import com.kingmang.LZREngine.Exeptions.SceneException;
 import com.kingmang.LZREngine.Geometry.Polygon2D;
 import com.kingmang.LZREngine.Geometry.Vector2f;
 import com.kingmang.LZREngine.Phisics.Physics;
+import com.kingmang.LZREngine.example.TestObject;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -61,7 +62,6 @@ public class TestScene extends Scene {
         Vector2f nextPosition = Physics.nextPosition(object1, updatesPerSecond);
         collision = object1.collidesWith(nextPosition, object2);
         if(!object1.isWithin(nextPosition, gameArea)){
-//            nextPosition = object1.getPosition();
             object1.getVelocity().multiplyY(0.9f);
             object1.getVelocity().multiplyX(0.9f);
             object1.getVelocity().flipY();
